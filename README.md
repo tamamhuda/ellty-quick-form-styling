@@ -35,7 +35,7 @@ This repository is public and can be reviewed if needed.
 ## How to Run Locally
 
 ```bash
-git clone <repo-url>
-cd <repo-name>
+git clone https://github.com/tamamhuda/ellty-quick-form-styling.git
+cd ellty-quick-form-styling
 open index.html
 ```
