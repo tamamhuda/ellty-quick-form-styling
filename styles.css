@@ -1,0 +1,131 @@
+:root {
+  /* Typography */
+  --font-family: "Montserrat", sans-serif;
+  --font-size: 14px;
+  --line-height: 130%;
+  --font-weight: 400;
+
+  /* Colors */
+  --color-text: #000000;
+  --color-bg: #ffffff;
+  --color-border: #eeeeee;
+  --color-divider: #cdcdcd;
+  --color-primary: #ffce22;
+  --color-primary-hover: #ffd84d;
+  --color-checkbox-checked: #2469f6;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  /* Shadows */
+  --shadow-main-1: 0px 8px 15px rgba(20, 20, 20, 0.12);
+  --shadow-main-2: 0px 0px 4px rgba(20, 20, 20, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.container {
+  width: fit-content;
+  max-width: 100%;
+  padding: 10px 0px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-main-1), var(--shadow-main-2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 85px auto 0;
+}
+
+/* Page row */
+.page-item {
+  width: 370px;
+  height: 42px;
+  padding: 8px 15px 8px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  cursor: pointer;
+}
+
+/* Divider */
+.divider {
+  width: 340px;
+  border-top: 0.7px solid var(--color-divider);
+  margin: 0 auto;
+}
+
+/* Checkbox */
+.checkbox {
+  width: 23px;
+  height: 23px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox.checked {
+  background: var(--color-checkbox-checked);
+  border: none;
+}
+
+.check-icon {
+  display: none;
+}
+
+.checkbox.checked .check-icon {
+  display: block;
+}
+
+/* Hover effects */
+.page-item:hover .checkbox {
+  border-color: #bdbdbd;
+}
+
+.page-item:hover .checkbox:not(.checked) .check-icon {
+  display: block;
+}
+
+.page-item:hover .checkbox:not(.checked) .check-icon path {
+  stroke: #e3e3e3;
+}
+
+.page-item:hover .checkbox.checked {
+  background-color: #5087f8;
+}
+
+/* Button */
+.button-wrapper {
+  width: 370px;
+  padding: 10px 15px;
+}
+
+button {
+  width: 340px;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--color-primary);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--color-primary-hover);
+}
